@@ -1,0 +1,32 @@
+\begin{appendices}
+
+\section{Metodo dei minimi quadrati}
+Applicando il metodo dei minimi quadrati alla legge lineare $ y = A + Bx$ la discrepanza risulta:
+
+\begin{equation}
+\displaystyle\sum_{i=1}^{N}\frac{(y_i -A-Bx_i)^2}{(\sigma y_i)^2}
+\end{equation}
+\hspace{-1.8em}
+
+Questa sommatoria è minimizzata da valori di A e B ottenuti come:
+
+\begin{equation}
+\label{eq:a}
+A = \frac{(\sum_i w_i x_i^2)(\sum_i w_i y_i)-(\sum_i w_i x_i)(\sum_i w_i x_i y_i)}{\Delta} 
+\end{equation}
+e
+\begin{equation}
+\label{eq:b}
+B = \frac{(\sum_i w_i)(\sum_i w_i y_i x_i)-(\sum_i w_i y_i)(\sum_i w_i x_i)}{\Delta}
+\end{equation}
+Dove abbiamo:
+\[ \Delta = (\sum_i w_i)(\sum_i w_i x_i^2)-(\sum_i w_i x_i)^2  \quad \quad  w_i = \frac{1}{(\sigma y_i)^2}\]
+\hspace{-1.8em}
+Le incertezze sui parametri sono date da:
+
+\begin{equation} 
+\label{eq:sasb}
+(\sigma A)^2 = \frac{\sum_i w_i x_i^2}{\Delta}\quad \quad (\sigma B)^2 = \frac{\sum_i w_i}{\Delta}
+\end{equation}
+
+\end{appendices}

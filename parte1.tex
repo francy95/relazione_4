@@ -13,12 +13,87 @@ Verificare che neanche una goccia d'acqua sia entrata nella bottiglia.
 Procedere quindi con la termalizzazione dell'aria.
 Preparare il bagno termico intorno alla bottiglia e controllare l'uniformità della temperatura, garantita dall'agitatore termico.
 Chiudere il rubinetto isolando il gas all'interno della bottiglia dall'ambiente esterno e garantendo quindi che il numero di moli di gas rimanga costante.
-Scegliamo di termalizzare inizialmente intorno ai $0^{\degree}$ per poi salire fino ad una tmperatura di circa $20^{\degree}$ e quindi ridiscendere fino al valore iniziale.
+Scegliamo di termalizzare inizialmente intorno ai $0^{\degree}$ per poi salire fino ad una temperatura di circa $20^{\degree}$ e quindi ridiscendere fino al valore iniziale.
 Scegliendo questa procedura di misurazione la bottiglia si troverà sempre in sovrapressione rispetto alla pressione atmosferica: in questo caso allora il manometro dovrà essere montato sul tavolo con il lato libero in grado di salire di circa 80 cm sopra la posizione iniziale (si consiglia quindi di scegliere un valore iniziale che non superi i 20 cm).
 Scegliendo di termalizzare il sitema a $0^{\degree}$, la presenza di ghiaccio nel bagno dovrà essere presente in maniera predominante rispetto all'acqua: la coesistenza di queste due fasi assicura che la temperatura sia circa uguale allo zero termico.
 Immergere quindi la bottiglia nel bagno termico fino al tappo, prestando attenzione che non raggiunga i giunti di connessione dei rubinetti.
 Una volta raggiunto l'equilibrio termico alla temperatura iniziale, aprire il rubinetto e richiuderlo: in questo modo la pressione del gas all'interno della bottiglia viene uniformata con la pressione atmosferica $P_{A}$ ed il volume e le moli del gas sono costanti. 
-Si potrà procedere con l'esperienza.
+Procediamo poi con le misurazioni.\\
+Da aggiungere paragrafo 9.4.3 scheda di laboratorio
 
 
-\section{Misura di pressione al variare della temperatura}
+\section{Analisi dati}
+
+\begin{table}[H]
+\centering
+
+	\begin{subtable}{.5\textwidth}
+		\centering
+		\begin{tabular}{|c|c|} \hline
+			\textbf{h {[cm]} } & \textbf{T {[\degree C]} }  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+			130.5 & 2.306  \\ \hline
+		\end{tabular}
+		\caption{Aumentando la temperatura}
+	\end{subtable}%
+	\begin{subtable}{.5\textwidth}
+	\centering
+	\begin{tabular}{|c|c|} \hline
+		\textbf{h {[cm]} } & \textbf{T {[\degree C]} }  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+	\end{tabular}
+	\caption{Diminuendoo la temperatura}
+\end{subtable}
+
+\caption{Dislivelo in funzione della temperatura}
+\end{table}
+In tabella 1 ci sono i dati che abbiamo raccolto durante la nostra esperienza, sono divisi i due tabelle, una relative alle misure prese facendo aumentare la temperatura mentre la seconda relativa alle misure prese facendo diminuire la temperatura. Questi dati sono graficati nella Figura 1. In tale figura abbiamo scelto di rappresentare i punti relativi alla Tabella 1.a in colore rosso, mentre i dati relativi alla Tabella 1.b sono in colore blu.\\
+INSERIRE GRAFICO\\
+\newline
+Tramite regressione lineare troviamo la retta $h = A+B\theta$ che meglio interpreta i nostri dati. Le formule per il calcolo sono la \eqref{eq:a} e la \eqref{eq:b} riportate in appendice.
+Verifichiamo la bontà di questo risultato tramite test del $\chi^2$. Ci viene un $\chi^2=boh$, troppo alto rispetto all'aspettativa di 9 gradi di libertà. L'incertezza è quindi troppo piccolo. Ricalcoliamo a posteriori l'incertezza e discutiamone la plausibilità.\\
+\newline
+Durante l'esperienza si è utilizzato un barometro in laboratorio per la misura della pressione atmosferica $P_A$ variabile nel tempo. Nel nostro manometro differenziale la pressione dovuta alla colonnina di acqua è data da: $\Delta P = \rho gh$. La pressione $P$ del nostro gas è quindi 
+\begin{equation}
+\label{eq:p}
+P = P_A + \rho gh
+\end{equation}
+In appendice B è riportata la Tabella relativa alla pressione atmosferica misurata nel tempo, grazie a quella e all'equazione \eqref{eq:p} possiamo stimare la pressione $P$ del gas in funzione della temperatura.\\
+Stima delle incertezze\\
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|c|c|} \hline
+		\textbf{P {[pa]} } & \textbf{T {[\degree C]} }  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+		130.5 & 2.306  \\ \hline
+	\end{tabular}
+	\caption{Pressione del gas in funzione della temperatura}
+\end{table}
