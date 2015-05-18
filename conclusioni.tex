@@ -1,0 +1,22 @@
+\section{Conclusioni: errori sistematici}
+\subsection{Volume di gas non termalizzato con il bagno termico}
+Una possibile causa di errore sistematico è la possibile presenza di gas non termalizzato con il bagno termico all'interno dell'ampolla.
+È infatti possibile che il gas dell'ampolla presenti una parte di volume $V$ termalizzato con il bagno termico ed una parte di volume $v$ non termalizzato con il bagno termico e che si trova quindi a temperatura ambiente.
+Considerando $n$ moli di gas nell'ampolla, l'equazione di stato diventa:
+\begin{equation}
+n R = P_0 \left[\frac{V}{T_0} + \frac{v}{T_a}\right] = P \left[\frac{V}{T} + \frac{v}{T_a}\right]
+\end{equation}
+dove $T_a$ rappresenta la temperatura ambiente.
+Otteniamo quindi:
+\begin{equation}
+\frac{P_0 V}{T_0} \left[1 + v T_0 V T_a\right]= \frac{P V}{T} \left[1 + \frac{v T}{V T_a}\right]
+\end{equation}
+La relazione tra temperatura $T$  e pressione assoluta $P$ va quindi corretta, ottenendo quindi:
+\begin{equation}
+P = \left(\frac{P_0}{T_0}\right) \frac{1 + \left(\frac{v T_0}{V T_a} \right)}{1 + \left(\frac{v T}{V T_a}\right)} T = P_0 \frac{1 + \left(\frac {v T_0}{V T_a}\right)}{1 + \left(\frac{v T}{V T_a}\right)} \left(1 + \alpha T \right)
+\end{equation}
+Al crescere della temperatura quindi la pedenza della funzione $P(T)$ diminuisce.
+Ad ogni modo, anche se il volume del gas dell'ampolla $v$ fosse effettivamente tutto termalizzato, nel caso reale andrebbe comunque applicata una correzione sulla pressione del tipo:
+\begin{equation}
+P_{mis} = \frac{n R T}{V + \frac{v T}{T_a}}
+\end{equation}
