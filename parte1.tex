@@ -53,7 +53,6 @@ L'incertezza su questa misura è data dalla risoluzione del barometro, ovvero $\
 
 \begin{table}[H]
 \centering
-
 	\begin{subtable}{.5\textwidth}
 		\centering
 		\begin{tabular}{|c|c|} \hline
@@ -92,22 +91,50 @@ L'incertezza su questa misura è data dalla risoluzione del barometro, ovvero $\
 
 \caption{Dislivello $\Delta h$ in funzione della temperatura $T$}
 \end{table}
-In Tabella 1.a e Tabella 1.b troviamo riportati i dati raccolti durante la nostra esperienza rispettivamente aumentando e diminuendo la temperatura del bagno termico. 
-Notiamo che l'ultimo valore della Tabella 1.a è uguale al primo valore della Tabella 1.b.
+In Tabella 1.a e Tabella 1.b troviamo riportati i dati raccolti durante la nostra esperienza rispettivamente aumentando e diminuendo la temperatura del bagno termico.
 Troviamo graficati tali dati in Figura 1. 
 
 \begin{figure}[H]
 \centering
 \includegraphics[width=\textwidth]{img/1}
-\caption{Grafico di $\Delta h$ in funzione di $T$: scegliamo di rappresentare in colore rosso i dati riportati in Tabella 1.a ed in colore verde i dati riportati in Tabella 1.b}
+\caption{Grafico di $\Delta h$ in funzione di $T$: in colore rosso i dati riportati in Tabella 1.a ed in colore verde i dati riportati in Tabella 1.b}
 \end{figure}
 
 Tramite regressione lineare troviamo la retta $h = A+B\theta$ che meglio interpreta i nostri dati. 
-Le formule per il calcolo sono la \eqref{eq:a} e la \eqref{eq:b} riportate in appendice.
-Verifichiamo la bontà di questo risultato tramite test del $\chi^2$. Ci viene un $\chi^2=boh$, troppo alto rispetto all'aspettativa di 9 gradi di libertà.
-L'incertezza è quindi troppo piccolo. 
-Ricalcoliamo a posteriori l'incertezza e discutiamone la plausibilità.\\
+Per farlo dobbiamo innanzitutto trasferire le incertezze dalle ascisse alle ordinate, procediamo quindi a stimare graficamente un valore iniziale della pendenza $b$ della retta e trasferiamo l'incertezza.
+\begin{equation}
+\sigma(\Delta h)_{tot} = \sqrt{\sigma(\Delta h)^2 + (b\sigma T)^2}
+\end{equation}
+Le formule per il calcolo sono la \eqref{eq:a} e la \eqref{eq:b} riportate in appendice. Otteniamo:
+\[a =-10.7291 \pm 0.0119 \quad  b= 0.0393\pm  0.000041966\]
+Verifichiamo la bontà di questo risultato tramite test del $\chi^2$. Ci viene un $\chi^2=948.6366$, decisamente troppo alto come valore.
+La retta quindi interpreta malamente i nostri dati. In Figura 1 si può osservare come vari dati non stiano sulla retta. Sempre dal grafico possiamo osservare come i nostri dati possano comportarsi in maniera diversa sopra e sotto i 285 K. Infatti questa è circa la temperatura di rugiada dell'aria. Ci aspettiamo quindi che al di sopra di questa temperatura l'aria si comporti come gas ideale mentre al di sotto ci sarà un contributo dato dal vapore che sarà pari alla tensione di vapor saturo, avremmo quindi una più forte pendenza in funzione della temperatura in quanto la tensione di vapore saturo mostra derivata rispetto alla temperatura maggiore rispetto a quella del gas perfetto.\\
 \newline
+Dividiamo quindi il problema in due parti divise dalla temperatura di rugiada 285 K.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/2}
+\caption{Grafico di $\Delta h$ in funzione di $T$: 2 rette diverse per i dati divisi da 285 K}
+\end{figure}
+
+Iniziamo a valutare i dati al di sotto dei 285 K.\\
+Procediamo nello stesso identico modo di prima e tramite regressione lineare troviamo la retta $h = A+B\theta$.
+Otteniamo:
+\[a =-11.0928 \pm 0.0289 \quad  b= 0.0406\pm 0.00010355\]
+Il $\chi^2$ ci da: 231.5047. Decisamente troppo alto, molto probabilemente abbiamo sottostimato le incertezze sui valori, calcoliamo le incertezze a posteriori:
+\begin{equation}
+\label{eq:post}
+\sigma(\Delta h)_{post} = \frac{1}{N-2}\sum_{i=1}^N(h-a-bT)^2
+\end{equation}
+Ci viene un incertezza a posteriori pari a $6.3\, mm$. È piuttosto difficile attriburla alla lettura del metro. In questa incertezza però innanzitutto contribuisce anche la risoluzione del termometro che non basta però a spiegare questa incertezza. Per comprenderne iL significato dobbiamo considerare la variazione di pressione atromosferica durante la sessione in cui si sono prese le misure. Questa analisi iniziale non ne tiene conto il suo effetto però si evidenzia bene in questa incertezza.\\
+\newline
+Studiamo ora l'andamento dei dati al di sopra dei 285K. Sempre allo stesso modo cerchiamo la retta $h = A+B\theta$ che interpreta meglio i nostri dati. Otteniamo:
+\[a = -9.8096 \pm 0.0385 \quad  b= 0.0361 \pm 0.0001327\]
+IL test del $\chi^2$ ci fornisce la bontà di questo fit: $\chi^2 = 48.5434$. Un po troppo alto rispetto a quello che volevamo. Procediamo dunque a calcolare l'incertezza a posteriori con l'equazione \eqref{eq:post} e otteniamo un incerteza a posteriori di $2.8\, mm$, che può essere comprensibile tenendo conto della risoluzioni di 1 millimetro del metro, della risoluzione del termometro trasferita e della variazione di pressione atmosferica durante l'acquisizione dei dati.
+
+
+\subsection{Determinazione dello \emph{zero assoluto}}
 Durante l'esperienza si è utilizzato un barometro in laboratorio per la misura della pressione atmosferica $P_A$ variabile nel tempo. Nel nostro manometro differenziale la pressione dovuta alla colonnina di acqua è data da: $\Delta P = \rho gh$. 
 La pressione $P$ del nostro gas è quindi 
 \begin{equation}
@@ -137,6 +164,5 @@ Stima delle incertezze\\
 
 Da inserire in grafico :)
 
-\subsection{Determinazione dello \emph{zero assoluto}}
 Lo zero assoluto è rappresentato graficamente dall'intersezione tra la retta del dislivello $\Delta h$ in funzione della temperatura $T$ e l'asse delle ascisse.
 Questo punto rappresenta la condizione $P = 0$.
