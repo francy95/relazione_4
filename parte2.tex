@@ -10,7 +10,7 @@
 			\textbf{$\Delta h {[cm]}$ } & \textbf{T {[\degree C]} }  \\ \hline
 			-0.5 & 0  \\ \hline
 			18.3 & 4.7  \\ \hline
-			30.4 & 7.77  \\ \hline
+			30.4 & 7.8  \\ \hline
 			43.4 & 11.5  \\ \hline
 			57.9 & 15.1  \\ \hline
 			69 & 18.1  \\ \hline
@@ -27,13 +27,109 @@
 		49.6 & 12.5  \\ \hline
 		35 & 8.7  \\ \hline
 		19.9 & 5.1  \\ \hline
-		-0.2 & 0.16  \\ \hline
+		-0.2 & 0.2  \\ \hline
 	\end{tabular}
 	\caption{Diminuzione della temperatura }
 \end{subtable}
 
 \caption{Dislivello $\Delta h$ in funzione della temperatura $T$ }
 \end{table}
-In Tabella 3.a e Tabella 3.b troviamo riportati il secondo set di dati raccolti durante la nostra esperienza rispettivamente aumentando e diminuendo la temperatura del bagno termico.
-Troviamo graficati tali dati in Figura 3. 
+In Tabella 2.a e Tabella 2.b troviamo riportati il secondo set di dati raccolti durante la nostra esperienza rispettivamente aumentando e diminuendo la temperatura del bagno termico.
+Troviamo graficati tali dati in Figura 4. 
 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/4}
+\caption{Grafico di $\Delta h$ in funzione di $T$: in colore rosso i dati riportati in Tabella 2.a ed in colore verde i dati riportati in Tabella 2.b }
+\end{figure}
+
+Tramite regressione lineare troviamo la retta $h = A+BT$ che meglio interpreta i nostri dati. 
+Trasferiamo le incertezze dalle ascisse alle ordinate e procediamo quindi a stimare graficamente un valore iniziale della pendenza $B$ della retta tramite le relazioni \eqref{eq:propagazione} e le \eqref{eq:a} e la \eqref{eq:b} riportate in Appendice A.
+Otteniamo:
+\[A = -10.51 \pm 0.01 m \quad  B = 0.0385 \pm 0.00005\frac{m}{K} \]
+Verifichiamo la bontà di questo risultato tramite test del $\chi^2$. 
+Otteniamo un $\chi^2 = 580.881$, decisamente troppo alto come valore.
+La retta quindi interpreta malamente i nostri dati. 
+
+
+
+In Figura 4 si può osservare come i vari dati non siano allineati sulla retta. 
+Sempre in Figura 4, in maniera meno evidente rispetto alla Figura 1 in quanto le misure prese sono di numero minore, possiamo osservare come i nostri dati si comportino in maniera diversa sopra e sotto i 285 K, ovvero la temperatura di rugiada dell'aria. 
+%Ci aspettiamo quindi che al di sopra di questa temperatura l'aria si comporti come un gas ideale mentre al di sotto ci sarà un contributo dato dal vapore che sarà pari alla tensione di vapor saturo; avremmo quindi una più forte pendenza in funzione della temperatura in quanto la tensione di vapore saturo mostra derivata rispetto alla temperatura maggiore rispetto a quella del gas perfetto.\\
+\newline
+Dividiamo nuovamente l'esperienza in due parti, divise dalla temperatura di rugiada 285 K.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/5}
+\caption{Grafico di $\Delta h$ in funzione di $T$: 2 rette diverse per i dati divisi da 285 K}
+\end{figure}
+
+Iniziamo a valutare i dati al di sotto dei 285 K.\\
+Procediamo nello stesso identico modo usato precedentemente e tramite regressione lineare troviamo la retta $h = A+BT$.
+Otteniamo:
+\[A = -10.70 \pm 0.03 m \quad  B = 0.0392 \pm 0.0001\frac{m}{K}\]
+Otteniamo un $\chi^2$ pari a 244.96. 
+Il valore del $\chi^2$ risulta decisamente troppo alto, molto probabilmente perchè abbiamo sottostimato le incertezze sui valori.
+Procediamo quindi calcolando le incertezze a posteriori tramite la relazione \eqref{eq:post} ed otteniamo una incertezza a posteriori pari a $ 8.7 $ mm. 
+Per comprenderne il significato dobbiamo considerare la variazione di pressione atmosferica $P_A$ durante la sessione in cui sono state prese le misure. 
+Questa analisi iniziale non tiene conto del suo effetto che è però già ben visibile in questa incertezza.\\
+\newline
+Studiamo ora l'andamento dei dati al di sopra dei 285 K. 
+Cerchiamo quindi analogamente la retta $h = A+BT$ che interpreta al meglio i nostri dati. 
+Otteniamo:
+\[A = -9.83 \pm 0.05 m \quad  B = 0.0361 \pm 0.0001\frac{m}{K}\]
+Il test del $\chi^2$ ci fornisce la bontà di questo fit: $\chi^2 = 96.6174 $. 
+Queto valore risulta essere un pò troppo alto rispetto a quello desiderato. 
+Procediamo dunque a calcolare l'incertezza a posteriori con l'equazione \eqref{eq:post} ed otteniamo un incertezza a posteriori di $ 5.5 $ mm, che può essere comprensibile tenendo conto della risoluzioni di 1 millimetro del metro, della risoluzione del termometro trasferita e della variazione di pressione atmosferica durante l'acquisizione dei dati.
+
+\subsection{Determinazione dello \emph{zero assoluto}}
+Durante l'esperienza abbiamo utilizzato un barometro per la misura della pressione atmosferica $P_A$ variabile nel tempo. 
+%Come già spiegato, sarà necessario prendere più misure di pressione durante la durata dell'esperienza.
+Riportiamo i valori dell'andamento della pressione atmosferica $P_A$ nel tempo in Tabella 5 in Appedice B.
+Notiamo che l'andamento della pressione atmosferica nel tempo, ovvero i vari valori che la pressione assume nel tempo, non sono compatibili con la sua incertezza di misura.
+Questo indica che vi è una variazione della grandezza nel tempo di cui bisogna tenere conto durante l'analisi dei dati.
+Nel manometro differenziale utilizzato durante l'esperienza la pressione dovuta alla colonnina di acqua è data da: $\Delta P = \rho gh$. 
+%La pressione $P$ del gas racchiuso nell'ampolla di vetro è quindi 
+%\begin{equation}
+%\label{eq:p}
+%P = P_A + \rho gh
+%\end{equation}
+%dove $\rho = 1 \frac{kg}{dm^3}$ è la densità dell'acqua e $g = 9.807 \frac{m}{s^2}$ è l'accelerazione di gravità.
+%Grazie ai valori della pressione atmosferica $P_A$ raccolti in Tabella 5 ed all'equazione \eqref{eq:p} possiamo stimare la pressione $P$ del gas in funzione della temperatura.\\
+L'incertezza su $P$ è data dal contributo dell'incertezza di $P_A$ e dal termine $\rho gh$, l'incertezza su $\sigma P_A = \frac{39.98}{\sqrt{12}} = 11.54$ Pa, mentre l'incertezza sull'altro termine è l'incertezza su $h$ calcolata nelle \eqref{eq:propagazione} moltiplicata per $\rho g$ pari quindi a 11.61 Pa.  
+Quindi l'incertezza sulla pressione atmosferica influisce maggiormente.
+La varianza di $P$ è uguale alla somma di queste due varianze come in \eqref{sigma P}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{img/6}
+\caption{Grafico a barre della pressione $P$ in funzione della temperatura}
+\end{figure}
+
+
+
+
+
+
+
+
+In Figura 6 si nota il diverso comportamento della pressione al di sotto della temperatura di rugiada, per calcolare lo zero assoluto possiamo quindi utilizzare solamente i dati più affidabili, ovvero quelli al di sopra di tale temperatura.
+Il dislivello $h$ è legato in maniera lineare alla temperatura, pertanto:
+\begin{equation}
+\rho gh = \rho g (A + B T)
+\end{equation}
+con A e B costanti.
+Ma allora dalla \eqref{eq:p} otteniamo che:
+\begin{equation}
+P = P_A + \rho g (A + B T) = f (T)
+\end{equation}
+dove $f(\theta)$ sarà la retta da considerare per la determinazione dello zero assoluto.
+Infatti lo zero assoluto $\theta_0$ è rappresentato graficamente dall'intersezione dell'asse delle ascisse, ovvero $P = 0$, e la funzione $f(t)$.
+Quindi lo zero assoluto vale: 
+\begin{equation}
+\theta_0 = \frac{P_A - A \rho g}{\rho gB} = -2.7 K
+\end{equation}
+
+SI VALUTI L'INCERTEZZA SU $\theta_0$ DOVUTA ALLA PROPAGAZIONE DELL'INCERTEZZA SULLE GRANDEZZE MISURATE DIRETTAMENTE.
