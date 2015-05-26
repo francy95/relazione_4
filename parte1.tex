@@ -47,7 +47,7 @@ P = P_A + \rho g h
 \end{equation}
 dove $P_A$ è la pressione atmosferica calcolata con il barometro, $\rho = 1 \frac{kg}{dm^3}$ è la densità dell'acqua e $g = 9.807 \frac{m}{s^2}$
 è l'accelerazione di gravità.
-L'incertezza su questa misura è data dalla risoluzione del barometro, ovvero $\sigma P = 39.98$ Pa.
+L'incertezza su questa misura è data dalla risoluzione del barometro, ovvero $\sigma P = \frac{39.98}{\sqrt{12}}$ Pa.
 
 \section{Analisi dati: primo set}
 \subsection{Pressione e temperatura}
@@ -141,6 +141,8 @@ Otteniamo una incertezza a posteriori pari a $6.3$ mm.
 È piuttosto difficile attribuire questa incertezza alla lettura della scala graduata del metro: ad essa contribuisce infatti anche la risoluzione del termometro che non basta però a spiegarla completamente. 
 Per comprenderne il significato dobbiamo considerare la variazione di pressione atmosferica $P_A$ durante la sessione in cui sono state prese le misure. 
 Questa analisi iniziale non tiene conto del suo effetto che è però già ben visibile in questa incertezza.\\
+DAPOST = 0.1465
+DBPOST = 0.00052
 \newline
 Studiamo ora l'andamento dei dati al di sopra dei 285K. 
 Cerchiamo quindi analogamente la retta $h = A+BT$ che interpreta al meglio i nostri dati. 
@@ -149,6 +151,9 @@ Otteniamo:
 Il test del $\chi^2$ ci fornisce la bontà di questo fit: $\chi^2 = 48.5434$. 
 Queto valore risulta essere un pò troppo alto rispetto a quello desiderato. 
 Procediamo dunque a calcolare l'incertezza a posteriori con l'equazione \eqref{eq:post} ed otteniamo un incertezza a posteriori di $2.8$ mm, che può essere comprensibile tenendo conto della risoluzioni di 1 millimetro del metro, della risoluzione del termometro trasferita e della variazione di pressione atmosferica durante l'acquisizione dei dati.
+
+DAPOST = 0.0947
+DBPOST = 0.00033
 
 
 \subsection{Determinazione dello \emph{zero assoluto}}

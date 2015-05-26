@@ -75,6 +75,10 @@ Il valore del $\chi^2$ risulta decisamente troppo alto, molto probabilmente perc
 Procediamo quindi calcolando le incertezze a posteriori tramite la relazione \eqref{eq:post} ed otteniamo una incertezza a posteriori pari a $ 8.7 $ mm. 
 Per comprenderne il significato dobbiamo considerare la variazione di pressione atmosferica $P_A$ durante la sessione in cui sono state prese le misure. 
 Questa analisi iniziale non tiene conto del suo effetto che è però già ben visibile in questa incertezza.\\
+DAPOST = 0.2298
+DBPOST = 0.0008
+
+
 \newline
 Studiamo ora l'andamento dei dati al di sopra dei 285 K. 
 Cerchiamo quindi analogamente la retta $h = A+BT$ che interpreta al meglio i nostri dati. 
@@ -84,20 +88,14 @@ Il test del $\chi^2$ ci fornisce la bontà di questo fit: $\chi^2 = 96.6174 $.
 Queto valore risulta essere un pò troppo alto rispetto a quello desiderato. 
 Procediamo dunque a calcolare l'incertezza a posteriori con l'equazione \eqref{eq:post} ed otteniamo un incertezza a posteriori di $ 5.5 $ mm, che può essere comprensibile tenendo conto della risoluzioni di 1 millimetro del metro, della risoluzione del termometro trasferita e della variazione di pressione atmosferica durante l'acquisizione dei dati.
 
+DAPOST = 0.2332
+DBPOST = 0.0008
 \subsection{Determinazione dello \emph{zero assoluto}}
 Durante l'esperienza abbiamo utilizzato un barometro per la misura della pressione atmosferica $P_A$ variabile nel tempo. 
-%Come già spiegato, sarà necessario prendere più misure di pressione durante la durata dell'esperienza.
 Riportiamo i valori dell'andamento della pressione atmosferica $P_A$ nel tempo in Tabella 5 in Appedice B.
 Notiamo che l'andamento della pressione atmosferica nel tempo, ovvero i vari valori che la pressione assume nel tempo, non sono compatibili con la sua incertezza di misura.
 Questo indica che vi è una variazione della grandezza nel tempo di cui bisogna tenere conto durante l'analisi dei dati.
 Nel manometro differenziale utilizzato durante l'esperienza la pressione dovuta alla colonnina di acqua è data da: $\Delta P = \rho gh$. 
-%La pressione $P$ del gas racchiuso nell'ampolla di vetro è quindi 
-%\begin{equation}
-%\label{eq:p}
-%P = P_A + \rho gh
-%\end{equation}
-%dove $\rho = 1 \frac{kg}{dm^3}$ è la densità dell'acqua e $g = 9.807 \frac{m}{s^2}$ è l'accelerazione di gravità.
-%Grazie ai valori della pressione atmosferica $P_A$ raccolti in Tabella 5 ed all'equazione \eqref{eq:p} possiamo stimare la pressione $P$ del gas in funzione della temperatura.\\
 L'incertezza su $P$ è data dal contributo dell'incertezza di $P_A$ e dal termine $\rho gh$, l'incertezza su $\sigma P_A = \frac{39.98}{\sqrt{12}} = 11.54$ Pa, mentre l'incertezza sull'altro termine è l'incertezza su $h$ calcolata nelle \eqref{eq:propagazione} moltiplicata per $\rho g$ pari quindi a 11.61 Pa.  
 Quindi l'incertezza sulla pressione atmosferica influisce maggiormente.
 La varianza di $P$ è uguale alla somma di queste due varianze come in \eqref{sigma P}.
@@ -107,12 +105,6 @@ La varianza di $P$ è uguale alla somma di queste due varianze come in \eqref{si
 \includegraphics[width=\textwidth]{img/6}
 \caption{Grafico a barre della pressione $P$ in funzione della temperatura}
 \end{figure}
-
-
-
-
-
-
 
 
 In Figura 6 si nota il diverso comportamento della pressione al di sotto della temperatura di rugiada, per calcolare lo zero assoluto possiamo quindi utilizzare solamente i dati più affidabili, ovvero quelli al di sopra di tale temperatura.
