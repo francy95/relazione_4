@@ -196,7 +196,17 @@ dove $f(T)$ sarà la retta da considerare per la determinazione dello zero assol
 Infatti lo zero assoluto $T_0$ è rappresentato graficamente dall'intersezione dell'asse delle ascisse, ovvero $P = 0$, e la funzione $f(T)$.
 Quindi lo zero assoluto vale: 
 \begin{equation}
-T_0 = \frac{P_A - A \rho g}{\rho gB} = -2.7 K
+T_0 = \frac{P_A - A \rho g}{\rho gB} =
 \end{equation}
+L'incertezza su questa misura si ottiene con la propagazione dell'incertezza, il numeratore ha incertezza:
+\begin{equation}
+\sigma N = \sqrt{(\sigma P_A)^2 + (\rho g \sigma A)^2}
+\end{equation}
+L'incertezza sullo zero per cui è:
+\begin{equation}
+\sigma T_0 = T_0\sqrt{\left(\frac{\sigma N}{P_A - A \rho g}\right)^2 +\left(\frac{\sigma B}{B}\right)^2 } 
+\end{equation}
+In cocnclusione otteniamo:
+\[T_0 = -2.7025 \pm 1.345 \]
 
-SI VALUTI L'INCERTEZZA SU $T_0$ DOVUTA ALLA PROPAGAZIONE DELL'INCERTEZZA SULLE GRANDEZZE MISURATE DIRETTAMENTE.
+

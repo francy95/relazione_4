@@ -77,8 +77,6 @@ Per comprenderne il significato dobbiamo considerare la variazione di pressione 
 Questa analisi iniziale non tiene conto del suo effetto che è però già ben visibile in questa incertezza.\\
 DAPOST = 0.2298
 DBPOST = 0.0008
-
-
 \newline
 Studiamo ora l'andamento dei dati al di sopra dei 285 K. 
 Cerchiamo quindi analogamente la retta $h = A+BT$ che interpreta al meglio i nostri dati. 
@@ -124,4 +122,13 @@ Quindi lo zero assoluto vale:
 \theta_0 = \frac{P_A - A \rho g}{\rho gB} = -2.7 K
 \end{equation}
 
-SI VALUTI L'INCERTEZZA SU $\theta_0$ DOVUTA ALLA PROPAGAZIONE DELL'INCERTEZZA SULLE GRANDEZZE MISURATE DIRETTAMENTE.
+L'incertezza su questa misura si ottiene con la propagazione dell'incertezza, il numeratore ha incertezza:
+\begin{equation}
+\sigma N = \sqrt{(\sigma P_A)^2 + (\rho g \sigma A)^2}
+\end{equation}
+L'incertezza sullo zero per cui è:
+\begin{equation}
+\sigma T_0 = T_0\sqrt{\left(\frac{\sigma N}{P_A - A \rho g}\right)^2 +\left(\frac{\sigma B}{B}\right)^2 } 
+\end{equation}
+In cocnclusione otteniamo:
+\[T_0 = -3.7931 \pm 1.8856 \]
