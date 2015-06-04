@@ -50,7 +50,7 @@ dove $P_A$ è la pressione atmosferica calcolata con il barometro, $\rho = 1 \fr
 L'incertezza su questa misura è data dalla risoluzione del barometro, ovvero $\sigma P = \frac{39.98}{\sqrt{12}}$ Pa.
 
 \section{Analisi dati: primo set}
-\subsection{Pressione e temperatura}
+\subsection{Temperatura e dislivello}
 
 \begin{table}[H]
 \centering
@@ -61,14 +61,14 @@ L'incertezza su questa misura è data dalla risoluzione del barometro, ovvero $\
 			0 & 0  \\ \hline
 			8.5 & 2.3  \\ \hline
 			15.9 & 4.1  \\ \hline
-			24 & 6.1  \\ \hline
+			24.0 & 6.1  \\ \hline
 			31.7 & 8.1  \\ \hline
-			40.4 & 10  \\ \hline
+			40.4 & 10.0 \\ \hline
 			49.8 & 12.1  \\ \hline
 			56.8 & 14.3  \\ \hline
-			63.3 & 16  \\ \hline
+			63.3 & 16.0  \\ \hline
 			71.8 & 18.4  \\ \hline
-			77.6 & 20  \\ \hline
+			77.6 & 20.0  \\ \hline
 		\end{tabular}
 		\caption{Aumento della temperatura }
 	\end{subtable}%
@@ -76,12 +76,12 @@ L'incertezza su questa misura è data dalla risoluzione del barometro, ovvero $\
 	\centering
 	\begin{tabular}{|c|c|} \hline
 		\textbf{$\Delta h {[cm]}$ } & \textbf{T {[\degree C]} }  \\ \hline
-		77.6 & 20  \\ \hline
+		77.6 & 20.0  \\ \hline
 		73.4 & 18.8  \\ \hline
-		66.2 & 17  \\ \hline
-		59.4 & 15  \\ \hline
+		66.2 & 17.0  \\ \hline
+		59.4 & 15.0  \\ \hline
 		52.4 & 13.1  \\ \hline
-		44.2 & 11  \\ \hline
+		44.2 & 11.0  \\ \hline
 		36.2 & 8.9  \\ \hline
 		26.5 & 6.9  \\ \hline
 		18.9 & 5.1  \\ \hline
@@ -111,7 +111,7 @@ Le formule per il calcolo sono la \eqref{eq:a} e la \eqref{eq:b} riportate in Ap
 Otteniamo:
 \[A = -10.73 \pm 0.01 m \quad  B = 0.0393 \pm  0.00004 \frac{m}{K} \] .
 Verifichiamo la bontà di questo risultato tramite test del $\chi^2$. 
-Ci viene un $\chi^2 = 948.6366$, decisamente troppo alto come valore.
+Ci viene un $\chi^2 = 948.6366$, con i nostri gradi di libertà, questo valore va al di fuori di un intervallo di falso allarme del 10\%.
 La retta quindi interpreta malamente i nostri dati. 
 In Figura 1 si può osservare come i vari dati non siano allineati sulla retta. 
 Sempre in Figura 1 possiamo osservare come i nostri dati si comportino in maniera diversa sopra e sotto i 285 K. 
@@ -131,7 +131,7 @@ Procediamo nello stesso identico modo usato precedentemente e tramite regression
 Otteniamo:
 \[A = -11.09 \pm 0.03 m \quad  B = 0.0406\pm 0.0001 \frac{m}{K}\]
 Otteniamo un $\chi^2$ pari a 231.5047. 
-Il valore del $\chi^2$ risulta ancora troppo alto, molto probabilmente perchè abbiamo sottostimato le incertezze sui valori.
+Con i nostri gradi di libertà, questo valore va al di fuori di un intervallo di falso allarme del 10\%, molto probabilmente perchè abbiamo sottostimato le incertezze sui valori.
 Procediamo quindi calcolando le incertezze a posteriori:
 \begin{equation}
 \label{eq:post}
@@ -141,19 +141,16 @@ Otteniamo una incertezza a posteriori pari a $6.3$ mm.
 È piuttosto difficile attribuire questa incertezza alla lettura della scala graduata del metro: ad essa contribuisce infatti anche la risoluzione del termometro che non basta però a spiegarla completamente. 
 Per comprenderne il significato dobbiamo considerare la variazione di pressione atmosferica $P_A$ durante la sessione in cui sono state prese le misure. 
 Questa analisi iniziale non tiene conto del suo effetto che è però già ben visibile in questa incertezza.\\
-DAPOST = 0.1465
-DBPOST = 0.00052
+Le incertezze a posteriori di A e di B sono: $\sigma A = 0.1465m$ $\sigma B = 0.00052\frac{m}{K}$
 \newline
 Studiamo ora l'andamento dei dati al di sopra dei 285K. 
 Cerchiamo quindi analogamente la retta $h = A+BT$ che interpreta al meglio i nostri dati. 
 Otteniamo:
 \[A = -9.81 \pm 0.04 m \quad  B = 0.0361 \pm 0.0001 \frac{m}{K}\]
 Il test del $\chi^2$ ci fornisce la bontà di questo fit: $\chi^2 = 48.5434$. 
-Queto valore risulta essere un pò troppo alto rispetto a quello desiderato. 
+Con i nostri gradi di libertà, questo valore va al di fuori di un intervallo di falso allarme del 10\% 
 Procediamo dunque a calcolare l'incertezza a posteriori con l'equazione \eqref{eq:post} ed otteniamo un incertezza a posteriori di $2.8$ mm, che può essere comprensibile tenendo conto della risoluzioni di 1 millimetro del metro, della risoluzione del termometro trasferita e della variazione di pressione atmosferica durante l'acquisizione dei dati.
-
-DAPOST = 0.0947
-DBPOST = 0.00033
+Le incertezze a posteriori di A e di B sono: $\sigma A = 0.0947m$ $\sigma B = 0.00033\frac{m}{K}$
 
 
 \subsection{Determinazione dello \emph{zero assoluto}}
@@ -190,13 +187,14 @@ Il dislivello $h$ è legato in maniera lineare alla temperatura, pertanto:
 con A e B costanti.
 Ma allora dalla \eqref{eq:p} otteniamo che:
 \begin{equation}
-P = P_A + \rho g (A + B T) = f (T)
+P = P_A + \rho g (A + B T) =:f (T)
 \end{equation}
 dove $f(T)$ sarà la retta da considerare per la determinazione dello zero assoluto.
 Infatti lo zero assoluto $T_0$ è rappresentato graficamente dall'intersezione dell'asse delle ascisse, ovvero $P = 0$, e la funzione $f(T)$.
 Quindi lo zero assoluto vale: 
 \begin{equation}
-T_0 = \frac{P_A - A \rho g}{\rho gB} =
+\label{eq:zero}
+T_0 = \frac{P_A - A \rho g}{\rho gB}
 \end{equation}
 L'incertezza su questa misura si ottiene con la propagazione dell'incertezza, il numeratore ha incertezza:
 \begin{equation}
@@ -204,9 +202,10 @@ L'incertezza su questa misura si ottiene con la propagazione dell'incertezza, il
 \end{equation}
 L'incertezza sullo zero per cui è:
 \begin{equation}
+\label{eq:dzero}
 \sigma T_0 = T_0\sqrt{\left(\frac{\sigma N}{P_A - A \rho g}\right)^2 +\left(\frac{\sigma B}{B}\right)^2 } 
 \end{equation}
-In cocnclusione otteniamo:
-\[T_0 = -2.7025 \pm 1.345 \]
+In conclusione otteniamo:
+\[T_0 = -2.7 \pm 1.4 \, K \]
 
 
